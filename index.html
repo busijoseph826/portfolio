@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Joseph Busi — Software Engineer focused on Java, Spring Boot, REST APIs and backend systems.">
+  <title>Joseph Busi | Backend Software Engineer</title>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <a class="logo" href="#home" aria-label="Joseph Busi home">JB<span>.</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        <button id="theme" class="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle theme">☼</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> SOFTWARE ENGINEER · HYDERABAD, INDIA</p>
+        <h1>Building reliable<br>backend systems<span class="accent">.</span></h1>
+        <p class="hero-intro">Hi, I’m <strong>Joseph Busi</strong>. I work with Java and Spring Boot to build dependable APIs and backend services.</p>
+        <p class="role-line"><span id="typed">Backend Engineer</span><span class="cursor" aria-hidden="true"></span></p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a>
+          <a class="btn secondary" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-note"><span aria-hidden="true">⌘</span> Focused on clean code, practical problem-solving, and continuous learning.</div>
+      </div>
+      <div class="hero-art" aria-label="Backend engineering illustration" role="img">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="code-card">
+          <div class="code-top"><span></span><span></span><span></span><small>BackendService.java</small></div>
+          <pre><code><span class="code-purple">@RestController</span>
+<span class="code-blue">public class</span> <span class="code-green">BackendService</span> {
+
+  <span class="code-purple">@GetMapping</span>(<span class="code-orange">"/api/health"</span>)
+  <span class="code-blue">public</span> String health() {
+    <span class="code-blue">return</span> <span class="code-orange">"Service is up"</span>;
+  }
+}</code></pre>
+          <div class="code-status"><span class="status-dot"></span> API ready <span class="code-status-right">HTTP 200</span></div>
+        </div>
+        <div class="floating-chip chip-java"><span>☕</span> Java</div>
+        <div class="floating-chip chip-spring"><span>✳</span> Spring Boot</div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+    </header>
+
+    <section id="about" class="section wrap reveal">
+      <div class="section-heading"><p class="eyebrow">A LITTLE ABOUT ME</p><h2>Engineering with <span class="accent">purpose.</span></h2></div>
+      <div class="about-grid">
+        <p class="about-lead">I’m a Software Engineer at Netcracker Technology, working on enterprise telecom backend applications.</p>
+        <div class="about-detail">
+          <p>I hold a B.Tech in Computer Science (AI &amp; ML) and enjoy turning complex requirements into clean, testable services. I’m continuing to strengthen my backend engineering skills and exploring SDE opportunities at product-based companies.</p>
+          <div class="mini-stats">
+            <div><strong>Java</strong><span>Core language</span></div>
+            <div><strong>Backend</strong><span>Primary focus</span></div>
+            <div><strong>Learning</strong><span>Always in progress</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-tinted reveal">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">MY TOOLKIT</p><h2>Skills &amp; technologies</h2><p class="section-subtitle">Tools and concepts I work with or am developing experience in.</p></div>
+        <div class="skill-groups">
+          <div class="skill-group"><div class="skill-icon">⌘</div><div><h3>Backend development</h3><div class="skills"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>REST APIs</span><span>Microservices</span></div></div></div>
+          <div class="skill-group"><div class="skill-icon">▤</div><div><h3>Data &amp; messaging</h3><div class="skills"><span>MySQL</span><span>H2</span><span>Kafka</span></div></div></div>
+          <div class="skill-group"><div class="skill-icon">⚙</div><div><h3>Tools &amp; foundations</h3><div class="skills"><span>Docker</span><span>AWS</span><span>GCP</span><span>Git</span><span>Data Structures &amp; Algorithms</span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section wrap reveal">
+      <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Projects that solve problems<span class="accent">.</span></h2><p class="section-subtitle">Illustrative project summaries. Add repository links and real implementation details before publishing.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter active" type="button" data-f="all" aria-pressed="true">All projects</button>
+        <button class="filter" type="button" data-f="security" aria-pressed="false">Security</button>
+        <button class="filter" type="button" data-f="messaging" aria-pressed="false">Messaging</button>
+        <button class="filter" type="button" data-f="api" aria-pressed="false">APIs</button>
+      </div>
+      <div class="project-grid">
+        <article class="project-card" data-c="security api">
+          <div class="project-top"><span class="project-number">01 / SECURITY</span><span class="project-symbol">⌁</span></div>
+          <h3>Auth &amp; Authorization API</h3><p>A backend API concept for secure registration, login, and role-based access control using JWT.</p>
+          <div class="tags"><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span></div>
+          <div class="project-foot"><span>Authentication</span><span aria-hidden="true">↗</span></div>
+        </article>
+        <article class="project-card" data-c="api">
+          <div class="project-top"><span class="project-number">02 / API DESIGN</span><span class="project-symbol">▣</span></div>
+          <h3>Task Management API</h3><p>A REST service concept for managing tasks with input validation and token-protected endpoints.</p>
+          <div class="tags"><span>Spring Boot</span><span>JWT</span><span>H2</span><span>REST</span></div>
+          <div class="project-foot"><span>CRUD operations</span><span aria-hidden="true">↗</span></div>
+        </article>
+        <article class="project-card" data-c="messaging">
+          <div class="project-top"><span class="project-number">03 / MESSAGING</span><span class="project-symbol">⌁</span></div>
+          <h3>Notification Service</h3><p>An event-driven service concept for sending notifications between loosely coupled services.</p>
+          <div class="tags"><span>Kafka</span><span>Microservices</span><span>Docker</span></div>
+          <div class="project-foot"><span>Event-driven design</span><span aria-hidden="true">↗</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-tinted reveal">
+      <div class="wrap">
+        <div class="section-heading"><p class="eyebrow">MY JOURNEY</p><h2>Experience &amp; education</h2></div>
+        <div class="journey">
+          <div class="journey-marker"><span></span></div>
+          <div class="journey-content"><p class="eyebrow">FEB 2025 — PRESENT · HYDERABAD, INDIA</p><h3>Software Engineer</h3><p class="company">Netcracker Technology</p><p>Developing and maintaining enterprise telecom backend applications. Add specific features delivered, production issues resolved, technologies used, and measurable outcomes to make this experience stronger.</p><div class="tags"><span>Java</span><span>Backend systems</span><span>Telecom</span></div></div>
+        </div>
+        <div class="education-note"><span class="education-icon">✦</span><div><h3>B.Tech — Computer Science (AI &amp; ML)</h3><p>Academic foundation in software engineering and artificial intelligence / machine learning.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section wrap reveal">
+      <div class="contact-panel">
+        <div class="contact-copy"><p class="eyebrow">LET’S CONNECT</p><h2>Have a backend challenge<br>in mind<span class="accent">?</span></h2><p>I’m interested in connecting with engineers and teams building useful products. Feel free to reach out.</p><a class="contact-email" href="mailto:you@example.com">you@example.com <span aria-hidden="true">↗</span></a><p class="edit-note">Before publishing, replace this placeholder with your professional email.</p></div>
+        <form id="form">
+          <label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Enter your name" required>
+          <label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required>
+          <label for="message">How can I help?</label><textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+          <button class="btn primary submit-btn" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+          <p id="msg" role="status" aria-live="polite">This opens your default email app; it does not send data to a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><a class="logo" href="#home">JB<span>.</span></a><p>Designed &amp; built with HTML, CSS and JavaScript.</p><a href="#home" class="back-top">Back to top ↑</a><p class="copyright">© <span id="yr"></span> Joseph Busi</p></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
