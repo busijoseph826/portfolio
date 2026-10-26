@@ -150,3 +150,45 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+/* Social profile links */
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 24px 0 16px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border: 1px solid var(--border-color, #444);
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  background-color: var(--surface-color, #222);
+}
+
+.social-links i {
+  font-size: 18px;
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links a {
+    padding: 10px 14px;
+  }
+}
+
