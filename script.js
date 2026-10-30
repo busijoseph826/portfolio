@@ -106,10 +106,10 @@
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
     const body = String(data.get("message") || "").trim();
-    const recipient = "you@example.com"; // Replace with your real email before publishing.
+    const recipient = "busijoseph123@gmail.com";
     const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
     const mailBody = encodeURIComponent(`${body}\n\nFrom: ${name}\nEmail: ${email}`);
-    message.textContent = "Opening your email app with a draft. Replace the placeholder email address in index.html and script.js before publishing.";
+    message.textContent = "Opening your email app with a draft. Please review it before sending.";
     window.location.href = `mailto:${recipient}?subject=${subject}&body=${mailBody}`;
   });
 
