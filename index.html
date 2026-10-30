@@ -105,35 +105,95 @@
       </div>
     </section>
 
-    <section id="projects" class="section wrap reveal">
-      <div class="section-heading"><p class="eyebrow">SELECTED WORK</p><h2>Projects that solve problems<span class="accent">.</span></h2><p class="section-subtitle">Illustrative project summaries. Add repository links and real implementation details before publishing.</p></div>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button class="filter active" type="button" data-f="all" aria-pressed="true">All projects</button>
-        <button class="filter" type="button" data-f="security" aria-pressed="false">Security</button>
-        <button class="filter" type="button" data-f="messaging" aria-pressed="false">Messaging</button>
-        <button class="filter" type="button" data-f="api" aria-pressed="false">APIs</button>
+    
+<section id="projects" class="section wrap reveal">
+  <div class="section-heading">
+    <p class="eyebrow">PERSONAL PROJECTS</p>
+    <h2>Projects that solve problems<span class="accent">.</span></h2>
+    <p class="section-subtitle">
+      Exploring backend development through practical Java and Spring Boot projects.
+    </p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filter projects">
+    <button class="filter active" type="button" data-f="all" aria-pressed="true">All projects</button>
+    <button class="filter" type="button" data-f="api" aria-pressed="false">APIs</button>
+    <button class="filter" type="button" data-f="security" aria-pressed="false">Security</button>
+    <button class="filter" type="button" data-f="microservices" aria-pressed="false">Microservices</button>
+  </div>
+
+  <div class="project-grid">
+
+    <article class="project-card" data-c="api">
+      <div class="project-top">
+        <span class="project-number">01 / BACKEND API</span>
+        <span class="project-symbol">▣</span>
       </div>
-      <div class="project-grid">
-        <article class="project-card" data-c="security api">
-          <div class="project-top"><span class="project-number">01 / SECURITY</span><span class="project-symbol">⌁</span></div>
-          <h3>Auth &amp; Authorization API</h3><p>A backend API concept for secure registration, login, and role-based access control using JWT.</p>
-          <div class="tags"><span>Spring Boot</span><span>Spring Security</span><span>JWT</span><span>MySQL</span></div>
-          <div class="project-foot"><span>Authentication</span><span aria-hidden="true">↗</span></div>
-        </article>
-        <article class="project-card" data-c="api">
-          <div class="project-top"><span class="project-number">02 / API DESIGN</span><span class="project-symbol">▣</span></div>
-          <h3>Task Management API</h3><p>A REST service concept for managing tasks with input validation and token-protected endpoints.</p>
-          <div class="tags"><span>Spring Boot</span><span>JWT</span><span>H2</span><span>REST</span></div>
-          <div class="project-foot"><span>CRUD operations</span><span aria-hidden="true">↗</span></div>
-        </article>
-        <article class="project-card" data-c="messaging">
-          <div class="project-top"><span class="project-number">03 / MESSAGING</span><span class="project-symbol">⌁</span></div>
-          <h3>Notification Service</h3><p>An event-driven service concept for sending notifications between loosely coupled services.</p>
-          <div class="tags"><span>Kafka</span><span>Microservices</span><span>Docker</span></div>
-          <div class="project-foot"><span>Event-driven design</span><span aria-hidden="true">↗</span></div>
-        </article>
+      <h3>Employee Management REST API</h3>
+      <p>
+        A Spring Boot application for managing employee information,
+        featuring CRUD operations, validation, exception handling,
+        and database integration.
+      </p>
+      <div class="tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Spring Data JPA</span>
+        <span>MySQL</span>
+        <span>REST API</span>
       </div>
-    </section>
+      <!--<div class="project-foot">
+        <span>In Progress</span>
+      </div>*/-->
+    </article>
+
+    <article class="project-card" data-c="security api">
+      <div class="project-top">
+        <span class="project-number">02 / SECURITY</span>
+        <span class="project-symbol">⌁</span>
+      </div>
+      <h3>Authentication &amp; Authorization API</h3>
+      <p>
+        A backend application focused on secure user registration,
+        login, JWT authentication, and role-based access control.
+      </p>
+      <div class="tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Spring Security</span>
+        <span>JWT</span>
+        <span>MySQL</span>
+      </div>
+      <!--<div class="project-foot">
+        <span>Planned</span>
+      </div>-->
+    </article>
+
+    <article class="project-card" data-c="microservices">
+      <div class="project-top">
+        <span class="project-number">03 / MICROSERVICES</span>
+        <span class="project-symbol">⌘</span>
+      </div>
+      <h3>Order Management Microservices</h3>
+      <p>
+        A distributed backend application exploring order processing,
+        inventory management, inter-service communication,
+        and event-driven architecture.
+      </p>
+      <div class="tags">
+        <span>Java</span>
+        <span>Spring Boot</span>
+        <span>Microservices</span>
+        <span>Kafka</span>
+        <span>Docker</span>
+      </div>
+      <!--<div class="project-foot">
+        <span>Planned</span>
+      </div>-->
+    </article>
+
+  </div>
+</section>
 
     <section id="experience" class="section section-tinted reveal">
       <div class="wrap">
@@ -142,7 +202,19 @@
           <div class="journey-marker"><span></span></div>
           <div class="journey-content"><p class="eyebrow">FEB 2025 — PRESENT · HYDERABAD, INDIA</p><h3>Software Engineer</h3><p class="company">Netcracker Technology</p><p>Developing and maintaining enterprise telecom backend applications. Add specific features delivered, production issues resolved, technologies used, and measurable outcomes to make this experience stronger.</p><div class="tags"><span>Java</span><span>Backend systems</span><span>Telecom</span></div></div>
         </div>
-        <div class="education-note"><span class="education-icon">✦</span><div><h3>B.Tech — Computer Science (AI &amp; ML)</h3><p>Academic foundation in software engineering and artificial intelligence / machine learning.</p></div></div>
+        
+<div class="education-note">
+  <div class="education-details">
+    <p class="eyebrow">EDUCATION</p>
+    <h3>Bachelor of Technology (B.Tech)</h3>
+    <p>Computer Science and Engineering – Artificial Intelligence &amp; Machine Learning</p>
+    <a href="https://www.vvitu.ac.in/" target="_blank" rel="noopener noreferrer">
+      Vasireddy Venkatadri International Technological University (VVITU)
+    </a>
+  </div>
+  <span class="education-year">2024</span>
+</div>
+
       </div>
     </section>
 
