@@ -1,29 +1,41 @@
 :root {
   color-scheme: dark;
-  --bg: #0b1120;
+  --bg: #0b1220;
   --surface: #111c2e;
-  --surface-2: #17243a;
-  --text: #edf3fb;
-  --muted: #a4b1c5;
-  --accent: #6d91f5;
-  --accent-2: #63c9d6;
-  --border: rgba(164, 184, 215, .14);
-  --shadow: 0 24px 70px rgba(0,0,0,.28);
-  --nav-bg: rgba(11,17,32,.86);
+  --surface-2: #1c2a3d;
+  --text: #e8eef7;
+  --muted: #9aaabd;
+  --accent: #7198c9;
+  --accent-2: #55b8bd;
+  --border: rgba(154, 170, 189, .16);
+  --shadow: 0 20px 55px rgba(0, 0, 0, .22);
+  --nav-bg: rgba(11, 18, 32, .92);
 }
+
 :root[data-theme="light"] {
   color-scheme: light;
-  --bg: #f7f8fc;
-  --surface: #ffffff;
-  --surface-2: #edf1fa;
-  --text: #172039;
-  --muted: #596780;
-  --accent: #456bd4;
-  --accent-2: #087f91;
-  --border: rgba(38, 53, 86, .15);
-  --shadow: 0 24px 70px rgba(30,42,80,.10);
-  --nav-bg: rgba(247,248,252,.88);
+
+  /* Backgrounds */
+  --bg: #edf1f5;
+  --surface: #f7f9fb;
+  --surface-2: #e5eaf0;
+
+  /* Typography */
+  --text: #263548;
+  --muted: #687789;
+
+  /* Muted accent colours */
+  --accent: #496b91;
+  --accent-2: #568585;
+
+  /* Borders and depth */
+  --border: rgba(45, 62, 82, .12);
+  --shadow: 0 14px 36px rgba(32, 48, 66, .07);
+
+  /* Navigation */
+  --nav-bg: rgba(237, 241, 245, .94);
 }
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.7; transition: background .25s, color .25s; }
@@ -324,5 +336,233 @@ button, a { -webkit-tap-highlight-color: transparent; }
     align-items: flex-start;
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+
+/* Colour refinement: restrained navy, steel blue and muted teal */
+.logo span,
+.accent,
+.nav-links > a:hover,
+.nav-links > a:focus-visible,
+.hero-note span,
+.floating-chip span,
+.back-top:hover,
+.contact-email {
+  color: var(--accent);
+}
+
+.eyebrow,
+.project-number,
+.skill-icon,
+.journey-marker span {
+  color: var(--accent);
+}
+
+.status-dot {
+  background: var(--accent-2);
+  box-shadow: none;
+}
+
+.primary {
+  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: none;
+}
+
+.primary:hover {
+  background: color-mix(in srgb, var(--accent) 88%, #000000);
+  border-color: color-mix(in srgb, var(--accent) 88%, #000000);
+}
+
+.hero-art::before {
+  box-shadow:
+    0 0 0 38px color-mix(in srgb, var(--accent) 3%, transparent),
+    0 0 0 76px color-mix(in srgb, var(--accent-2) 2%, transparent);
+}
+
+.orb-one {
+  background: radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 72%);
+}
+
+.orb-two {
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--accent-2) 10%, transparent), transparent 72%);
+}
+
+.code-purple { color: #aebbd0; }
+.code-blue { color: #8db5dc; }
+.code-green { color: #78b9a6; }
+.code-orange { color: #c9aa83; }
+
+.code-status-right {
+  color: var(--accent-2);
+}
+
+.filter:hover,
+.filter.active {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.skill-group:hover {
+  border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+}
+
+.project-card:hover {
+  border-color: color-mix(in srgb, var(--accent) 52%, var(--border));
+}
+
+.journey-marker span {
+  border-color: var(--accent);
+}
+
+.journey-content .company {
+  color: var(--accent);
+}
+
+.education-details a,
+.education-note a {
+  color: var(--accent);
+}
+
+:focus-visible {
+  outline-color: var(--accent);
+}
+
+
+/* ==========================================
+   PREMIUM INTERACTION AND VISUAL EFFECTS
+========================================== */
+
+/* Subtle ambient lighting in the hero */
+.hero {
+  isolation: isolate;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  top: 8%;
+  left: 12%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--accent) 12%, transparent),
+    transparent 70%
+  );
+  filter: blur(35px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Gentle floating code card */
+.code-card {
+  animation: codeFloat 7s ease-in-out infinite;
+  transition: border-color .3s ease, box-shadow .3s ease;
+}
+
+@keyframes codeFloat {
+  0%, 100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-1deg) translateY(-9px);
+  }
+}
+
+/* Refined project card interactions */
+.project-card {
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+
+@media (hover: hover) {
+  .project-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--accent);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
+  }
+
+  .skill-group:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+}
+
+/* Premium button interaction */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+.primary:hover {
+  box-shadow: 0 10px 28px
+    color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.secondary:hover {
+  background: var(--surface-2);
+  transform: translateY(-2px);
+}
+
+/* Floating technology chips */
+.floating-chip {
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.chip-java {
+  animation: chipFloat 6s ease-in-out infinite;
+}
+
+.chip-spring {
+  animation: chipFloat 7s ease-in-out infinite reverse;
+}
+
+@keyframes chipFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Smooth social link interaction */
+.social-links a {
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+@media (hover: hover) {
+  .social-links a:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+  }
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .code-card,
+  .chip-java,
+  .chip-spring {
+    animation: none;
+  }
+
+  .project-card,
+  .skill-group,
+  .btn,
+  .social-links a {
+    transition: none;
   }
 }
